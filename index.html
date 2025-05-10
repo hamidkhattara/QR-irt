@@ -27,6 +27,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 30px 20px;
       text-align: center;
+      width: 100%;
     }
 
     h1 {
@@ -81,8 +82,22 @@
 
     @media (max-width: 500px) {
       h1 { font-size: 1.5rem; }
-      .btn { font-size: 0.8rem; }
+      .btn { font-size: 0.8rem; padding: 8px; }
       .btn i { font-size: 1.2rem; }
+      .container {
+        padding: 15px 10px;
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 350px) {
+      h1 { font-size: 1.4rem; }
+      .btn { font-size: 0.7rem; padding: 6px; }
+      .btn i { font-size: 1rem; }
+      .container {
+        padding: 10px 5px;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -101,14 +116,13 @@
       <a class="btn instagram" href="https://www.instagram.com/magasin_sportif/" target="_blank">
         <i class="fab fa-instagram"></i> إنستغرام
       </a>
-      <a class="btn tiktok" href="https://www.tiktok.com/@sportifbireljiroran?_r=1&_d=secCgYIASAHKAESPgo8KDT6QCi%2Bm6E4HsVFtCP65j7BYDNrmtxIou2DBH9ClWuUgc9naRnfkb1m7yIlSHm5ZrsCvH8ENiOshTtDGgA%3D&_svg=1&checksum=e43df26442cdf38ea0b1e2288c70754f2f116f601777aa0f8addc88018e6960a&sec_uid=MS4wLjABAAAAqRPOB40MXBOEz8Oej554o1aC-lydjgQZoUVIb4PtxaEnmi8qEFZin9dZWzHkp9rv&sec_user_id=MS4wLjABAAAAqRPOB40MXBOEz8Oej554o1aC-lydjgQZoUVIb4PtxaEnmi8qEFZin9dZWzHkp9rv&share_app_id=1233&share_author_id=7036854520404313094&share_link_id=6f7ad905-61ac-4e6d-993f-326d2aa30855&sharer_language=fr&social_share_type=5&source=h5_m&timestamp=1746827401&u_code=dm28ci6f68j2fe&ug_btm=b8727%2Cb7360&ugbiz_name=ACCOUNT&user_id=7036854520404313094&utm_campaign=client_share&utm_medium=android&utm_source=copy" target="_blank">
+      <a class="btn tiktok" href="https://www.tiktok.com/@sportifbireljiroran" target="_blank">
         <i class="fab fa-tiktok"></i> تيك توك
       </a>
       <a class="btn phone" href="tel:+213123456789">
         <i class="fas fa-phone"></i> اتصال
       </a>
-      <a class="btn whatsapp" href="https://wa.me/+213666912360?text=مرحبًا!%20أنا%20مهتم%20بمتجركم%20الرياضي.%20هل%20يمكنكم%20تزويدي%20بمزيد%20من%20المعلومات؟
-      " target="_blank">
+      <a class="btn whatsapp" href="https://wa.me/+213666912360?text=مرحبًا!%20أنا%20مهتم%20بمتجركم%20الرياضي.%20هل%20يمكنكم%20تزويدي%20بمزيد%20من%20المعلومات؟" target="_blank">
         <i class="fab fa-whatsapp"></i> واتساب
       </a>
       <a class="btn telegram" href="https://t.me/213666912360" target="_blank">
