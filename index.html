@@ -1,39 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome Page</title>
+  <title>مرحباً بك في سبورتيف وهران!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    .container {
+      max-width: 400px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px 20px;
       text-align: center;
-      padding-top: 50px;
-      background-color: #f0f0f0;
     }
+
     h1 {
-      color: #333;
+      color: #007f3f; /* لون أخضر رياضي */
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
-    a.button {
-      display: inline-block;
-      margin: 20px;
-      padding: 15px 30px;
-      font-size: 18px;
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      background-color: #4CAF50;
+      padding: 10px;
+      border-radius: 10px;
       color: white;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      font-size: 0.9rem;
+      transition: transform 0.2s, background-color 0.3s;
     }
-    a.button:hover {
-      background-color: #45a049;
+
+    .btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .btn i {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+
+    .maps    { background-color: #34a853; } /* أخضر الخرائط */
+    .facebook { background-color: #1877f2; }
+    .instagram { background-color: #e1306c; }
+    .tiktok   { background-color: #000000; }
+    .phone    { background-color: #25d366; }
+    .whatsapp { background-color: #128c7e; }
+    .telegram { background-color: #0088cc; }
+    .email    { background-color: #ff6f00; }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 1.5rem; }
+      .btn { font-size: 0.8rem; }
+      .btn i { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome! Choose an Option</h1>
-  <a class="button" href="page1.html">Page 1</a>
-  <a class="button" href="page2.html">Page 2</a>
-  <a class="button" href="page3.html">Page 3</a>
+  <div class="container">
+    <h1>مرحباً بك في سبورتيف وهران!</h1>
+    <p>شكراً لمسحك الرمز! تابعنا للبقاء على اتصال.</p>
+
+    <div class="button-grid">
+      <a class="btn maps" href="https://www.google.com/maps/place/Magasin+sportif/@35.7316704,-0.5753762,17z/data=!3m1!4b1!4m6!3m5!1s0xd7e630ed385ac41:0xc3960dd489b4564a!8m2!3d35.7316704!4d-0.5753762!16s%2Fg%2F11pbz4jspv?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        <i class="fas fa-map-marker-alt"></i> الموقع
+      </a>
+      <a class="btn facebook" href="https://www.facebook.com/share/1AiHZFaRKA/" target="_blank">
+        <i class="fab fa-facebook-f"></i> فيسبوك
+      </a>
+      <a class="btn instagram" href="https://www.instagram.com/magasin_sportif/" target="_blank">
+        <i class="fab fa-instagram"></i> إنستغرام
+      </a>
+      <a class="btn tiktok" href="https://www.tiktok.com/@sportifbireljiroran?_r=1&_d=secCgYIASAHKAESPgo8KDT6QCi%2Bm6E4HsVFtCP65j7BYDNrmtxIou2DBH9ClWuUgc9naRnfkb1m7yIlSHm5ZrsCvH8ENiOshTtDGgA%3D&_svg=1&checksum=e43df26442cdf38ea0b1e2288c70754f2f116f601777aa0f8addc88018e6960a&sec_uid=MS4wLjABAAAAqRPOB40MXBOEz8Oej554o1aC-lydjgQZoUVIb4PtxaEnmi8qEFZin9dZWzHkp9rv&sec_user_id=MS4wLjABAAAAqRPOB40MXBOEz8Oej554o1aC-lydjgQZoUVIb4PtxaEnmi8qEFZin9dZWzHkp9rv&share_app_id=1233&share_author_id=7036854520404313094&share_link_id=6f7ad905-61ac-4e6d-993f-326d2aa30855&sharer_language=fr&social_share_type=5&source=h5_m&timestamp=1746827401&u_code=dm28ci6f68j2fe&ug_btm=b8727%2Cb7360&ugbiz_name=ACCOUNT&user_id=7036854520404313094&utm_campaign=client_share&utm_medium=android&utm_source=copy" target="_blank">
+        <i class="fab fa-tiktok"></i> تيك توك
+      </a>
+      <a class="btn phone" href="tel:+213123456789">
+        <i class="fas fa-phone"></i> اتصال
+      </a>
+      <a class="btn whatsapp" href="https://wa.me/+213666912360?text=مرحبًا!%20أنا%20مهتم%20بمتجركم%20الرياضي.%20هل%20يمكنكم%20تزويدي%20بمزيد%20من%20المعلومات؟
+      " target="_blank">
+        <i class="fab fa-whatsapp"></i> واتساب
+      </a>
+      <a class="btn telegram" href="https://t.me/213666912360" target="_blank">
+        <i class="fab fa-telegram-plane"></i> تيليغرام
+      </a>
+      <a class="btn email" href="mailto:contact@sportiforan.com">
+        <i class="fas fa-envelope"></i> البريد
+      </a>
+    </div>
+  </div>
 </body>
 </html>
