@@ -16,7 +16,7 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 10px;
       direction: rtl;
     }
 
@@ -25,27 +25,30 @@
       background-color: #fff;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 30px 20px;
+      padding: 25px 15px;
       text-align: center;
-      width: 100%;
+      width: 95%;
+      margin: 10px auto;
     }
 
     h1 {
       color: #007f3f; /* لون أخضر رياضي */
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-bottom: 10px;
+      line-height: 1.3;
     }
 
     p {
-      font-size: 1rem;
-      margin-bottom: 25px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
       color: #555;
+      line-height: 1.4;
     }
 
     .button-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
 
     .btn {
@@ -54,11 +57,12 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      padding: 10px;
+      padding: 12px 8px;
       border-radius: 10px;
       color: white;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       transition: transform 0.2s, background-color 0.3s;
+      min-height: 60px;
     }
 
     .btn:hover {
@@ -67,7 +71,7 @@
     }
 
     .btn i {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-bottom: 5px;
     }
 
@@ -80,23 +84,81 @@
     .telegram { background-color: #0088cc; }
     .email    { background-color: #ff6f00; }
 
-    @media (max-width: 500px) {
-      h1 { font-size: 1.5rem; }
-      .btn { font-size: 0.8rem; padding: 8px; }
-      .btn i { font-size: 1.2rem; }
+    /* Small phones (portrait) */
+    @media (max-width: 400px) {
       .container {
-        padding: 15px 10px;
-        width: 90%;
+        padding: 20px 10px;
+        width: 92%;
+      }
+      
+      h1 {
+        font-size: 1.4rem;
+      }
+      
+      p {
+        font-size: 0.85rem;
+        margin-bottom: 18px;
+      }
+      
+      .button-grid {
+        gap: 10px;
+      }
+      
+      .btn {
+        padding: 10px 6px;
+        font-size: 0.8rem;
+        min-height: 55px;
+      }
+      
+      .btn i {
+        font-size: 1.2rem;
       }
     }
 
+    /* Very small phones */
     @media (max-width: 350px) {
-      h1 { font-size: 1.4rem; }
-      .btn { font-size: 0.7rem; padding: 6px; }
-      .btn i { font-size: 1rem; }
       .container {
-        padding: 10px 5px;
-        width: 100%;
+        padding: 15px 8px;
+        width: 94%;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      p {
+        font-size: 0.8rem;
+      }
+      
+      .button-grid {
+        gap: 8px;
+      }
+      
+      .btn {
+        padding: 8px 5px;
+        font-size: 0.75rem;
+        min-height: 50px;
+      }
+      
+      .btn i {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Landscape mode for phones */
+    @media (max-height: 500px) and (orientation: landscape) {
+      body {
+        padding: 5px;
+        min-height: auto;
+      }
+      
+      .container {
+        padding: 15px;
+        max-width: 90%;
+      }
+      
+      .button-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   </style>
