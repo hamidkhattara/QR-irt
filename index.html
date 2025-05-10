@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مرحباً بك في سبورتيف وهران!</title>
+  <title>SPORTIF</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
@@ -18,37 +18,52 @@
       min-height: 100vh;
       padding: 10px;
       direction: rtl;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
     }
 
     .container {
-      max-width: 400px;
+      max-width: 420px;
       background-color: #fff;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 25px 15px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      padding: 25px 20px;
       text-align: center;
       width: 95%;
       margin: 10px auto;
+      border: 1px solid #e1e1e1;
+    }
+
+    .logo {
+      width: 220px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
     h1 {
-      color: #007f3f; /* لون أخضر رياضي */
-      font-size: 1.6rem;
+      color: #d82d2d;
+      font-size: 1.8rem;
       margin-bottom: 10px;
       line-height: 1.3;
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
 
-    p {
-      font-size: 0.9rem;
+    .subtitle {
+      font-size: 0.95rem; /* Reduced from 1.1rem */
       margin-bottom: 20px;
-      color: #555;
-      line-height: 1.4;
+      color: #000000; /* Changed to black */
+      line-height: 1.5;
+      font-weight: 500;
+      /* Removed gradient background styles */
     }
-
+    /* Rest of your CSS remains the same */
     .button-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .btn {
@@ -57,47 +72,141 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      padding: 12px 8px;
-      border-radius: 10px;
+      padding: 14px 10px;
+      border-radius: 12px;
       color: white;
-      font-size: 0.85rem;
-      transition: transform 0.2s, background-color 0.3s;
-      min-height: 60px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      min-height: 70px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: none;
     }
-
     .btn:hover {
-      transform: scale(1.05);
-      filter: brightness(1.1);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .btn i {
-      font-size: 1.3rem;
-      margin-bottom: 5px;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
     }
 
-    .maps    { background-color: #34a853; } /* أخضر الخرائط */
-    .facebook { background-color: #1877f2; }
-    .instagram { background-color: #e1306c; }
-    .tiktok   { background-color: #000000; }
-    .phone    { background-color: #25d366; }
-    .whatsapp { background-color: #128c7e; }
-    .telegram { background-color: #0088cc; }
-    .email    { background-color: #ff6f00; }
+    /* Button colors */
+    .maps    { background: linear-gradient(145deg, #34a853, #2d8e47); }
+    .facebook { background: linear-gradient(145deg, #1877f2, #166fe5); }
+    .instagram { background: linear-gradient(145deg, #e1306c, #c13584); }
+    .tiktok   { background: linear-gradient(145deg, #000000, #333333); }
+    .phone    { background: linear-gradient(145deg, #25d366, #128c7e); }
+    .whatsapp { background: linear-gradient(145deg, #128c7e, #075e54); }
+    .telegram { background: linear-gradient(145deg, #0088cc, #006699); }
+    .email    { background: linear-gradient(145deg, #ff6f00, #e65100); }
+
+    /* Call options modal */
+    .call-options {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .call-options-content {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .call-option-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: linear-gradient(145deg, #25d366, #128c7e);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .call-option-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .close-btn {
+      margin-top: 15px;
+      padding: 8px 15px;
+      background: #f44336;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
     /* Small phones (portrait) */
     @media (max-width: 400px) {
       .container {
-        padding: 20px 10px;
+        padding: 20px 15px;
         width: 92%;
+      }
+      
+      .logo {
+        width: 160px;
+      }
+      
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+      
+      .button-grid {
+        gap: 12px;
+      }
+      
+      .btn {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+        min-height: 65px;
+      }
+      
+      .btn i {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* Very small phones */
+    @media (max-width: 350px) {
+      .container {
+        padding: 18px 12px;
+        width: 94%;
+      }
+      
+      .logo {
+        width: 160px;
       }
       
       h1 {
         font-size: 1.4rem;
       }
       
-      p {
-        font-size: 0.85rem;
-        margin-bottom: 18px;
+      .subtitle {
+        font-size: 0.95rem;
       }
       
       .button-grid {
@@ -107,41 +216,11 @@
       .btn {
         padding: 10px 6px;
         font-size: 0.8rem;
-        min-height: 55px;
+        min-height: 60px;
       }
       
       .btn i {
-        font-size: 1.2rem;
-      }
-    }
-
-    /* Very small phones */
-    @media (max-width: 350px) {
-      .container {
-        padding: 15px 8px;
-        width: 94%;
-      }
-      
-      h1 {
         font-size: 1.3rem;
-      }
-      
-      p {
-        font-size: 0.8rem;
-      }
-      
-      .button-grid {
-        gap: 8px;
-      }
-      
-      .btn {
-        padding: 8px 5px;
-        font-size: 0.75rem;
-        min-height: 50px;
-      }
-      
-      .btn i {
-        font-size: 1.1rem;
       }
     }
 
@@ -165,35 +244,57 @@
 </head>
 <body>
   <div class="container">
-    <h1>مرحباً بك في سبورتيف وهران!</h1>
-    <p>شكراً لمسحك الرمز! تابعنا للبقاء على اتصال.</p>
+    <img src="logo.png" alt="سيروئين" class="logo">
+    <h1>عروض يومية 🎯 جودة وأسعار تنافسية 🔥</h1>
+    <div class="subtitle">شكرا لمسحكم الرمز تابعونا للبقاء على إتصال!</div>
 
     <div class="button-grid">
       <a class="btn maps" href="https://www.google.com/maps/place/Magasin+sportif/@35.7316704,-0.5753762,17z/data=!3m1!4b1!4m6!3m5!1s0xd7e630ed385ac41:0xc3960dd489b4564a!8m2!3d35.7316704!4d-0.5753762!16s%2Fg%2F11pbz4jspv?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-        <i class="fas fa-map-marker-alt"></i> الموقع
+        <i class="fas fa-map-marker-alt"></i> Maps
       </a>
       <a class="btn facebook" href="https://www.facebook.com/share/1AiHZFaRKA/" target="_blank">
-        <i class="fab fa-facebook-f"></i> فيسبوك
+        <i class="fab fa-facebook-f"></i> Facebook
       </a>
       <a class="btn instagram" href="https://www.instagram.com/magasin_sportif/" target="_blank">
-        <i class="fab fa-instagram"></i> إنستغرام
+        <i class="fab fa-instagram"></i> Instagram
       </a>
       <a class="btn tiktok" href="https://www.tiktok.com/@sportifbireljiroran" target="_blank">
-        <i class="fab fa-tiktok"></i> تيك توك
+        <i class="fab fa-tiktok"></i> Tiktok
       </a>
-      <a class="btn phone" href="tel:+213666912360">
-        <i class="fas fa-phone"></i> اتصال
+      <a class="btn phone" href="#" onclick="showCallOptions()">
+        <i class="fas fa-phone"></i> Appeler
       </a>
       <a class="btn whatsapp" href="https://wa.me/+213666912360?text=مرحبًا!%20أنا%20مهتم%20بمتجركم%20الرياضي.%20هل%20يمكنكم%20تزويدي%20بمزيد%20من%20المعلومات؟" target="_blank">
-        <i class="fab fa-whatsapp"></i> واتساب
+        <i class="fab fa-whatsapp"></i> Whatsapp
       </a>
-      <a class="btn telegram" href="https://t.me/213666912360" target="_blank">
-        <i class="fab fa-telegram-plane"></i> تيليغرام
+      <a class="btn telegram" href="https://t.me/+213541145060" target="_blank">
+        <i class="fab fa-telegram-plane"></i> Telegram
       </a>
       <a class="btn email" href="mailto:Khattaraomar31@gmail.com">
-        <i class="fas fa-envelope"></i> البريد
+        <i class="fas fa-envelope"></i> Email
       </a>
     </div>
   </div>
+
+  <!-- Call Options Modal -->
+  <div class="call-options" id="callOptions">
+    <div class="call-options-content">
+      <h3>اختر رقم للاتصال:</h3>
+      <a href="tel:+213666912360" class="call-option-btn">الرقم 1: 0666912360</a>
+      <a href="tel:+213541145060" class="call-option-btn">الرقم 2: 0541145060</a>
+      <button class="close-btn" onclick="hideCallOptions()">إغلاق</button>
+    </div>
+  </div>
+
+  <script>
+    function showCallOptions() {
+      document.getElementById('callOptions').style.display = 'flex';
+      event.preventDefault();
+    }
+    
+    function hideCallOptions() {
+      document.getElementById('callOptions').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
