@@ -41,19 +41,19 @@
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
-h1 {
-  font-family: 'Tajawal', 'Cairo', sans-serif; /* Modern Arabic look */
-  color: #e1e1e1; /* Bright gray similar to the logo */
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
-  text-align: center;
-  text-shadow:
-    1px 1px 1px #000,
-    2px 2px 2px rgba(0, 0, 0, 0.6),
-    -1px -1px 1px rgba(255, 255, 255, 0.2);
-}
+    h1 {
+      font-family: 'Tajawal', 'Cairo', sans-serif; /* Modern Arabic look */
+      color: #0000FF; /* Changed to blue as requested */
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      text-align: center;
+      text-shadow:
+        1px 1px 1px #000,
+        2px 2px 2px rgba(0, 0, 0, 0.6),
+        -1px -1px 1px rgba(255, 255, 255, 0.2);
+    }
 
     .subtitle {
       font-size: 1.1rem;
@@ -108,61 +108,6 @@ h1 {
     .whatsapp { background: linear-gradient(145deg, #128c7e, #075e54); }
     .telegram { background: linear-gradient(145deg, #0088cc, #006699); }
     .email    { background: linear-gradient(145deg, #ff6f00, #e65100); }
-
-    /* Call options modal */
-    .call-options,
-    .whatsapp-options {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.8);
-      z-index: 100;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .call-options-content,
-    .whatsapp-options-content {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      width: 80%;
-      max-width: 300px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .call-option-btn,
-    .whatsapp-option-btn,
-    .close-btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: linear-gradient(145deg, #25d366, #128c7e);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .call-option-btn:hover,
-    .whatsapp-option-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .close-btn {
-      background: #f44336;
-    }
 
     /* Responsive tweaks */
     @media (max-width: 400px) {
@@ -251,75 +196,35 @@ h1 {
 <body>
   <div class="container">
     <img src="logo.png" alt="سيروئين" class="logo">
-    <h1>عروض يومية  جودة وأسعار تنافسية 🔥</h1>
+    <h1>عروض يومية جودة وأسعار تنافسية 🔥</h1>
     <div class="subtitle">شكرا لمسحكم الرمز! تابعونا للبقاء على إتصال</div>
 
     <div class="button-grid">
-      <a class="btn maps" href="https://www.google.com/maps/place/Magasin+sportif/@35.7316704,-0.5753762,17z" target="_blank">
-        <i class="fas fa-map-marker-alt"></i> Maps
+      <a class="btn maps" href="https://www.irt-dz.org/" target="_blank">
+        <i class="fas fa-globe"></i> Web
       </a>
-      <a class="btn facebook" href="https://www.facebook.com/share/1AiHZFaRKA/" target="_blank">
+      <a class="btn facebook" href="https://www.facebook.com/share/15derU9D8W/" target="_blank">
         <i class="fab fa-facebook-f"></i> Facebook
       </a>
-      <a class="btn instagram" href="https://www.instagram.com/magasin_sportif/" target="_blank">
+      <a class="btn instagram" href="https://www.instagram.com/irt.2026?igsh=MXQ3cXF6bW04NDJpcg==" target="_blank">
         <i class="fab fa-instagram"></i> Instagram
       </a>
-      <a class="btn tiktok" href="https://www.tiktok.com/@sportifbireljiroran" target="_blank">
+      <a class="btn tiktok" href="https://www.tiktok.com/@irt_edu?_t=ZM-8xFeSE2BhUE&_r=1" target="_blank">
         <i class="fab fa-tiktok"></i> Tiktok
       </a>
-      <a class="btn phone" href="#" onclick="showCallOptions()">
+      <a class="btn phone" href="tel:+213669320304">
         <i class="fas fa-phone"></i> Appeler
       </a>
-      <a class="btn whatsapp" href="#" onclick="showWhatsappOptions()">
+      <a class="btn whatsapp" href="https://wa.me/+213669320304" target="_blank">
         <i class="fab fa-whatsapp"></i> Whatsapp
       </a>
-      <a class="btn telegram" href="https://t.me/+213541145060" target="_blank">
-        <i class="fab fa-telegram-plane"></i> Telegram
+      <a class="btn telegram" href="https://www.linkedin.com/company/irt-university?trk=public_post_feed-actor-name" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
       </a>
-      <a class="btn email" href="mailto:Khattaraomar31@gmail.com">
+      <a class="btn email" href="mailto:irtuniv@gmail.com">
         <i class="fas fa-envelope"></i> Email
       </a>
     </div>
   </div>
-
-  <!-- Call Options Modal -->
-  <div class="call-options" id="callOptions">
-    <div class="call-options-content">
-      <h3>اختر رقم للاتصال:</h3>
-      <a href="tel:+213666912360" class="call-option-btn">Numéro 1</a>
-      <a href="tel:+213541145060" class="call-option-btn">Numéro 2</a>
-      <button class="close-btn" onclick="hideCallOptions()">Retour</button>
-    </div>
-  </div>
-
-  <!-- WhatsApp Options Modal -->
-  <div class="whatsapp-options" id="whatsappOptions">
-    <div class="whatsapp-options-content">
-      <h3>اختر رقم للواتساب:</h3>
-      <a href="https://wa.me/+213666912360?text=مرحبًا!%20أنا%20مهتم%20بمتجركم%20الرياضي.%20هل%20يمكنكم%20تزويدي%20بمزيد%20من%20المعلومات؟" class="whatsapp-option-btn" target="_blank">Numéro 1</a>
-      <a href="https://wa.me/+213541145060?text=مرحبًا!%20أنا%20مهتم%20بمتجركم%20الرياضي.%20هل%20يمكنكم%20تزويدي%20بمزيد%20من%20المعلومات؟" class="whatsapp-option-btn" target="_blank">Numéro 2</a>
-      <button class="close-btn" onclick="hideWhatsappOptions()">Retour</button>
-    </div>
-  </div>
-
-  <script>
-    function showCallOptions(event) {
-      document.getElementById('callOptions').style.display = 'flex';
-      if (event) event.preventDefault();
-    }
-
-    function hideCallOptions() {
-      document.getElementById('callOptions').style.display = 'none';
-    }
-
-    function showWhatsappOptions(event) {
-      document.getElementById('whatsappOptions').style.display = 'flex';
-      if (event) event.preventDefault();
-    }
-
-    function hideWhatsappOptions() {
-      document.getElementById('whatsappOptions').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
